@@ -23,6 +23,18 @@ chartgame - ver 1.0
 
 [GoogleDrive] https://drive.google.com/file/d/1-xDdzdYY4jCxWvUKYLTYoXYdYbX3-98Y/view?usp=sharing
 
+# Usage
+---
+1) 프로젝트를 실행한 후 'cmd'나 프로젝트의 'Terminal' 창에서 chartgame 폴더의 static 경로 이동 -> node kline 명령어 입력
+
+ex)![kline](https://user-images.githubusercontent.com/88640259/163420891-1bfc351f-dcad-4e41-9e19-265da0802966.png)
+
+
+2) 프로젝트를 실행한 후 'cmd'나 프로젝트의 'Terminal' 창에서 chartgame 폴더의 static -> RESTGETAPIProxy -> node restproxy 명령어 입력
+
+ex)![rest](https://user-images.githubusercontent.com/88640259/163420907-ebb24eca-b4a0-4b1e-9da0-71428b5c9a02.png)
+
+
 # LOG
 ---
 22/04/14) 임시 비밀번호 발송 기능을 주석 처리해 두었습니다.  

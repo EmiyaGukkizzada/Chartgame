@@ -22,3 +22,16 @@ chartgame - ver 1.0
 22/04/14) chartgame - ver 1.0
 
 [GoogleDrive] https://drive.google.com/file/d/1-xDdzdYY4jCxWvUKYLTYoXYdYbX3-98Y/view?usp=sharing
+
+# LOG
+---
+22/04/14) 임시 비밀번호 발송 기능을 주석 처리해 두었습니다.  
+
+사용을 원하시면 아래의 과정을 순서대로 진행하시면 됩니다.
+
+1) application.yml -> gmail Transfer 주석해제 -> username에 gmail작성 ex) 1234@gmail.com -> password에 gmail 앱 비밀번호 입력
+
+2) controller -> FindController.java로 이동 -> 주석 처리된 import 주석 해제  및 findPwResult 메소드 주석 해제
+
+3) src -> webapp -> WEB-INF -> view -> findPw.jsp로 이동 -> h2태그 중 '임시 비밀번호 발급' 뒤의 문자열 삭제 
+

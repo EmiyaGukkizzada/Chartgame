@@ -17,7 +17,7 @@
 
 chartgame - ver 1.0
 
-# SQL
+# Oracle SQL
 ---
 22/04/14) chartgame - ver 1.0
 
@@ -41,7 +41,7 @@ ex)![rest](https://user-images.githubusercontent.com/88640259/163420907-ebb24eca
 
 사용을 원하시면 아래의 과정을 순서대로 진행하시면 됩니다.
 
-1) application.yml -> gmail Transfer 주석해제 -> username에 gmail작성 ex) 1234@gmail.com -> password에 gmail 앱 비밀번호 입력
+1) application.yml -> gmail Transfer 주석해제 -> username에 gmail작성 ex) 1234@gmail.com -> password에서 gmail 앱 비밀번호 입력
 
 2) controller -> FindController.java로 이동 -> 주석 처리된 import 주석 해제  및 findPwResult 메소드 주석 해제
 

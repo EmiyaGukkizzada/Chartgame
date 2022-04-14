@@ -10,3 +10,15 @@
 #### 완성도를 갖춰가는 프로젝트를 지켜봐 주세요! 😎✌
 
 ### 22/04/14) chartgame - ver 1.0
+
+# Update
+---
+22/04/14) 프로젝트 업로드
+
+chartgame - ver 1.0
+
+# SQL
+---
+22/04/14) chartgame - ver 1.0
+
+[GoogleDrive] https://drive.google.com/file/d/1-xDdzdYY4jCxWvUKYLTYoXYdYbX3-98Y/view?usp=sharing

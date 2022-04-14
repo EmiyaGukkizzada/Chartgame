@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- <settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings> -->
+	<typeAliases>
+		<typeAlias alias="Comment" type="com.example.chartgame.model.Comment"/>
+		<typeAlias alias="Emp" type="com.example.chartgame.model.Emp"/>
+		<typeAlias alias="Member" type="com.example.chartgame.model.Member"/>
+		<typeAlias alias="Notice" type="com.example.chartgame.model.Notice"/>
+		<typeAlias alias="NoticeBoard" type="com.example.chartgame.model.NoticeBoard"/>
+		<typeAlias alias="PortFolio" type="com.example.chartgame.model.PortFolio"/>
+		<typeAlias alias="Trade" type="com.example.chartgame.model.Trade"/>
+	</typeAliases>
+</configuration>
+

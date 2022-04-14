@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="PortFolio">
+	<select id="portfolioSelect" parameterType="PortFolio" resultType="PortFolio">
+		select "Cash" from "PortFolio" where "ID" = '${id}'
+	</select>
+	<insert id="portfolioInsert" parameterType="PortFolio">
+		insert into "PortFolio" values (#{id}, #{cash}, null, 0, 0, 0)
+	</insert>
+	<update id="portfolioBuy" parameterType="String">
+		update "PortFolio" set "Cash"=${cash}, "Symbol"='${symbol}', "BuyPrice"=${hiddenpriceinput}, "SellPrice" = 0, "Quantity"="Quantity" + ${quantity} where "ID" ='${id}' 
+	</update>
+	<update id="portfolioSell" parameterType="String">
+		update "PortFolio" set "Cash"=${cash}, "Symbol" = '${symbol}', "BuyPrice" = 0, "SellPrice"=${hiddenpriceinput}, "Quantity"="Quantity" - ${quantity} where "ID" ='${id}'
+	</update>
+	<select id="portfolioList" parameterType="PortFolio" resultType="PortFolio">
+		select * from "PortFolio" where "ID" = '${id}'
+	</select>
+	<update id="portfolioSellOut" parameterType="String">
+		update "PortFolio" set "Cash"=${dbsellouttotalcash}, "Symbol" = '${symbol}', "Quantity" = "Quantity" + ${quantity} where "ID" = '${id}'
+	</update>
+	<update id="portfolioBuyOut" parameterType="String">
+		update "PortFolio" set "Cash"=${dbbuyouttotalcash}, "Symbol" = '${symbol}', "Quantity" = "Quantity" - ${quantity} where "ID" = '${id}'
+	</update>
+	<select id="portfolioRankList" parameterType="PortFolio" resultType="PortFolio">
+		select "ID"
+			 , "Cash"
+			 , Rank() over (order by "Cash" desc)
+		from "PortFolio"
+		order by "Cash" desc
+	</select>
+</mapper>

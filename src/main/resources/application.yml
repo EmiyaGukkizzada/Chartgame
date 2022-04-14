@@ -1,0 +1,44 @@
+# http port set
+server:
+
+  port: 8583
+
+  
+# Oracle Connect (JDBC)
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: chartgame
+    password: tiger
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    
+   # ORM JPA
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+#개인정보로 인하여 막아두었습니다
+
+#   # gmail Transfer
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: 
+#    password: 
+#    properties:
+#       mail:
+#        smtp:
+#          auth: true
+#          starttls.enable: true
+   
+   #view resolver(Templete -> JSP Use)
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+# Mybatis
+mybatis:
+  #classpath: src/main/resources
+  config-location: classpath:configuration.xml
+  mapper-locations: classpath:mappers/*.xml

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TradeDao">
+	<insert id="buyTrade" parameterType="String">
+		insert into "Trade" values (trade_seq.nextval, '${id}', ${hiddenpriceinput}, 0, ${quantity}, '${symbol}', sysdate)
+	</insert>
+	<insert id="sellTrade" parameterType="String">
+		insert into "Trade" values (trade_seq.nextval, '${id}', 0, ${hiddenpriceinput}, ${quantity}, '${symbol}', sysdate)
+	</insert>
+	<insert id="sellOut" parameterType="String">
+		insert into "Trade" values (trade_seq.nextval, '${id}', 0, ${hiddenpriceinput}, ${quantity}, '${symbol}', sysdate)
+	</insert>
+	<insert id="buyOut" parameterType="String">
+		insert into "Trade" values (trade_seq.nextval, '${id}', ${hiddenpriceinput}, 0, ${quantity}, '${symbol}', sysdate)
+	</insert>
+</mapper>

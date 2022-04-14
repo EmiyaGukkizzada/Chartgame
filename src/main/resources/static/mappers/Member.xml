@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberDao">
+	<!-- 로그인 id pw 확인 -->
+	<select id="GetIdPw" parameterType="String" resultType="Member">
+		select id, pw, "State", "Name", "Img" FROM "Member" WHERE id=#{id}
+	</select>
+	<!-- 회원가입 -->
+	<insert id="memberJoin" parameterType="member">
+		insert into "Member" values (#{id}, #{pw}, #{email}, #{name}, sysdate, #{state}, #{img, jdbcType=VARCHAR})    
+	</insert>
+	<!-- id 체크 -->
+	<select id="memberIdChk" parameterType="member" resultType="int">
+		select count(id) from "Member" where id=#{id}
+	</select>
+	
+</mapper>
